@@ -15,7 +15,11 @@
             bst.Insert(60);
             bst.Insert(80);
 
+
+            Console.WriteLine("Inorder Traversal:");
+            bst.InorderTraversal();
             
+
         }
     }
 }
