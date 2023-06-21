@@ -111,6 +111,41 @@ namespace BinarySearchTree
             }
         }
 
-       
+        //Postorder Traversal
+        public void PostorderTraversal()
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            Stack<TreeNode> stack1 = new Stack<TreeNode>();
+            Stack<TreeNode> stack2 = new Stack<TreeNode>();
+            stack1.Push(root);
+
+            while (stack1.Count > 0)
+            {
+                TreeNode current = stack1.Pop();
+                stack2.Push(current);
+
+                if (current.Left != null)
+                {
+                    stack1.Push(current.Left);
+                }
+
+                if (current.Right != null)
+                {
+                    stack1.Push(current.Right);
+                }
+            }
+
+            while (stack2.Count > 0)
+            {
+                TreeNode current = stack2.Pop();
+                Console.Write(current.Value + " ");
+            }
+        }
+
+
     }
 }
