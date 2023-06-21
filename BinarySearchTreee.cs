@@ -147,5 +147,29 @@ namespace BinarySearchTree
         }
 
 
+        //Search method in binarysearch tree
+        public bool Search(int value)
+        {
+            TreeNode current = root;
+
+            while (current != null)
+            {
+                if (value == current.Value)
+                {
+                    return true;
+                }
+                else if (value < current.Value)
+                {
+                    current = current.Left;
+                }
+                else
+                {
+                    current = current.Right;
+                }
+            }
+
+            return false;
+        }
+
     }
 }

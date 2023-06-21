@@ -29,6 +29,11 @@
             Console.WriteLine("Postorder Traversal:");
             bst.PostorderTraversal();
 
+            Console.WriteLine();
+
+            Console.WriteLine("Searching for value 4: " + bst.Search(40));
+            Console.WriteLine("Searching for value 9: " + bst.Search(9));
+
 
         }
     }
