@@ -18,7 +18,12 @@
 
             Console.WriteLine("Inorder Traversal:");
             bst.InorderTraversal();
-            
+
+            Console.WriteLine();
+
+            Console.WriteLine("Preorder Traversal:");
+            bst.PreorderTraversal();
+
 
         }
     }

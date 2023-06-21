@@ -83,5 +83,34 @@ namespace BinarySearchTree
         }
 
 
+        //preorder traversal
+        public void PreorderTraversal()
+        {
+            if (root == null)
+            {
+                return;
+            }
+
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            stack.Push(root);
+
+            while (stack.Count > 0)
+            {
+                TreeNode current = stack.Pop();
+                Console.Write(current.Value + " ");
+
+                if (current.Right != null)
+                {
+                    stack.Push(current.Right);
+                }
+
+                if (current.Left != null)
+                {
+                    stack.Push(current.Left);
+                }
+            }
+        }
+
+       
     }
 }
